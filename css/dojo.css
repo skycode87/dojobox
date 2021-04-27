@@ -1,0 +1,60 @@
+.pricing-columns {
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.priscing_area .single_prising .prising_header .subtitle {
+  font-size: 18px !important;
+}
+
+.black-text {
+  color: #000 !important;
+}
+
+.header-area .main-header-area .main-menu ul li a {
+  font-family: "Morganite Book", sans-serif !important;
+  font-size: 32px;
+  letter-spacing: 4px;
+  font-weight: 300;
+}
+
+.catagory_area .single_catagory p {
+  font-size: 16px;
+  line-height: 28px;
+  color: #fff;
+  margin: 16px 0 24px 0;
+  max-width: 350px;
+  margin: auto;
+  height: 200px;
+}
+
+.features_area h3 {
+  font-size: 120px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  color: #85754f;
+}
+
+.features_area h6 {
+  font-size: 12px;
+  color: #85754f;
+  font-family: "SourceSerifPro", sans-serif;
+  height: 40px;
+  max-width: 200px;
+  margin: auto;
+}
+
+.offer_area .offer_text h3 {
+  color: #fff;
+  font-size: 150px;
+  font-weight: bold;
+  line-height: 1;
+  margin-top: 24px;
+  letter-spacing: 5px;
+  margin-bottom: 10px;
+  font-family: "Morganite Book", sans-serif !important;
+}
+
+.form-contact .form-control {
+  background-color: #fff !important;
+}
