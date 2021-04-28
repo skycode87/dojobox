@@ -44,6 +44,18 @@
   margin: auto;
 }
 
+h2#countdown{
+  font-family: "SourceSerifPro", sans-serif;
+  font-size: 42px;
+  font-weight: bold;
+  text-transform: initial;
+}
+
+hr.line{
+    border-bottom: 1px solid #fff;
+    max-width: 400px;
+}
+
 .offer_area .offer_text h3 {
   color: #85754f;
   font-size: 150px;

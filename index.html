@@ -85,14 +85,21 @@
             <div class="row align-items-center justify-content-center">
                 <div class="col-xl-12">
                     <div class="slider_text text-center">
-                        <h2>Construye tu cuerpo - Fortalece tu mente - Conoce tu espiritu</h2>
-                        <p>Experiencias que apuntan a tu bienestar.<br>Transformate fisicamente - Genera cambios mentales y espirituales</p>
-                        <a href="#link06" class="boxed-btn3">Te contamos como</a>
+                        <h2>Construye tu cuerpo - Fortalece tu mente - Conoce tu espíritu</h2>
+                        <p >Experiencias que apuntan a tu bienestar.<br>Transfórmate físicamente - Genera cambios mentales y espirituales</p>
+                        <hr class="line">
+                        <p>Gran Innauguración en</p>
+                        <h2 id="countdown"></h2><br>
+                        <a href="#link06" class="boxed-btn3">
+                            <img style="position: relative; top: -3px" src="img/dojo/svg/whatsapp.png" width="20px"> Unete a nosotros</a>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    
+
 
     <!-- catagory_area  -->
     <div class="catagory_area">
@@ -188,7 +195,7 @@
                         Innauguración</h4>
                         <h3>50% Off</h3>
                         <p>Plan Fidelidad (03 Meses)</p>
-                        <a href="#" class="boxed-btn3">Más información</a>
+                        <a href="#" class="boxed-btn3"><img style="position: relative; top: -3px" src="img/dojo/svg/whatsapp.png" width="20px"> Más información</a>
                     </div>
                 </div>
             </div>
@@ -342,7 +349,7 @@
                                 </a>
                             </div>
                           <p>Medellin<br>  
-                                <a href="tel:+573148218237"> +57 314 821 8237 </a> <br> 
+                                <a href="tel:+573148218237"> <img src="img/dojo/svg/whatsapp.png" width="20px"> +57 314 821 8237 </a> <br> 
                                 <a href="mail:contact@dojobox.com.co">contact@dojobox.com.co</a>
                             </p>
                             <p>
@@ -491,10 +498,10 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             var minutes = Math.floor((distance % _hour) / _minute);
             var seconds = Math.floor((distance % _minute) / _second);
     
-            document.getElementById('countdown').innerHTML = rellenar(days) + ':';
-            document.getElementById('countdown').innerHTML += rellenar(hours) + ':';
-            document.getElementById('countdown').innerHTML += rellenar(minutes) + ':';
-            document.getElementById('countdown').innerHTML += rellenar(seconds) + '';
+            document.getElementById('countdown').innerHTML = rellenar(days) + ' días ';
+            document.getElementById('countdown').innerHTML += rellenar(hours) + ' horas ';
+            document.getElementById('countdown').innerHTML += rellenar(minutes) + ' min ';
+            document.getElementById('countdown').innerHTML += rellenar(seconds) + ' seg ';
         }
     
         timer = setInterval(showRemaining, 1000);
