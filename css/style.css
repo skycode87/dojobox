@@ -2459,7 +2459,7 @@ h3 {
 .offer_area .offer_text h4 {
   font-size: 60px;
   line-height: 56px;
-  letter-spacing: 4px;
+  letter-spacing: 5px;
   font-family: "Morganite Book", sans-serif;
   color: #fff;
   text-transform: uppercase;
@@ -2497,7 +2497,7 @@ h3 {
 /* line 76, ../../Arafath/CL/Cl November/227. Health _ Fitness/HTML/scss/_features.scss */
 .offer_area .offer_text p {
   color: #ffffff;
-  font-size: 16px;
+  font-size:246px;
   margin-bottom: 40px;
 }
 
@@ -2640,6 +2640,7 @@ h3 {
 
 .parallax h2{
   font-size: 80px;
+  text-transform: uppercase;
   color: #fff;
 }
 
