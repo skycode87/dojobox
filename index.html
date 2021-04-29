@@ -461,7 +461,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script src="js/mail-script.js"></script>
 
     <script src="js/main.js"></script>
-    <script>
+<script>
         $('.container-fluid a[href^="#"]').on('click', function(e) {
   e.preventDefault();
   
@@ -472,7 +472,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     scrollTop: targetOffset - 100
    }, 500);
 });
-    </script>
+</script>
 
 <script>
     var end = new Date('06/01/2021 9:30 AM');
@@ -511,10 +511,19 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             return x;
         }
 
-    </script>
+</script>
+
 
     
-
+<!-- Cluuf configuration -->
+<link async rel="stylesheet" href="https://cluuftracks.herokuapp.com/cluuf.css">	
+<script>
+         const keypublic = "32242525fd2f7d184fbc00511153b7eq33232";
+         const instanceId = "5fd41cefce505979816ec0de";
+         localStorage.setItem("keypublic",keypublic); 
+         localStorage.setItem("instanceId",instanceId); </script>
+<script async src="https://cluuftracks.herokuapp.com/track.js"></script>
+<!-- Cluuf configuration -->
 </body>
 
 </html>
