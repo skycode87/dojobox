@@ -527,6 +527,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <!-- Cluuf configuration -->
 
 <script>
+ 
+
+
 const sendEmail = () => {
     if (jQuery("#name").val() == "") {
         Swal.fire({
@@ -534,7 +537,7 @@ const sendEmail = () => {
             type: 'error',
             title: 'Please verify firstname',
             showConfirmButton: false,
-            timer: 1500
+            timer: 5000
         });
         return false;
     } else if (jQuery("#email").val() == "") {
@@ -543,7 +546,7 @@ const sendEmail = () => {
             type: 'error',
             title: 'Please verify Email',
             showConfirmButton: false,
-            timer: 1500
+            timer: 5000
         });
         return false;
     } else if (jQuery("#message").val() == "") {
@@ -552,7 +555,7 @@ const sendEmail = () => {
             type: 'error',
             title: 'Please verify  the Message',
             showConfirmButton: false,
-            timer: 1500
+            timer: 5000
         });
         return false;
     }
