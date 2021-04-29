@@ -3449,6 +3449,7 @@ h3 {
   padding-left: 18px;
   font-size: 13px;
   background: transparent;
+  font-family: sans-serif;
 }
 
 /* line 69, ../../Arafath/CL/Cl November/227. Health _ Fitness/HTML/scss/_contact.scss */
@@ -3460,6 +3461,7 @@ h3 {
 /* line 74, ../../Arafath/CL/Cl November/227. Health _ Fitness/HTML/scss/_contact.scss */
 .form-contact .form-control::placeholder {
   font-weight: 300;
+  font-family: sans-serif;
   color: #999999;
 }
 
