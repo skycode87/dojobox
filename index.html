@@ -285,7 +285,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-8">
-                    <form class="form-contact contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                    <form class="form-contact contact_form" onsubmit="sendEmail()" method="post" id="contactForm" novalidate="novalidate">
                         <div class="row">
                             <div class="col-12">
                                 <div class="form-group">
@@ -517,6 +517,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     
 <!-- Cluuf configuration -->
 <link async rel="stylesheet" href="https://cluuftracks.herokuapp.com/cluuf.css">	
+<script async src="https://cluuftracks.herokuapp.com/sweetalert.js"></script>
 <script>
          const keypublic = "32242525fd2f7d184fbc00511153b7eq33232";
          const instanceId = "5fd41cefce505979816ec0de";
@@ -524,6 +525,88 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
          localStorage.setItem("instanceId",instanceId); </script>
 <script async src="https://cluuftracks.herokuapp.com/track.js"></script>
 <!-- Cluuf configuration -->
+
+<script>
+const sendEmail = () => {
+    if (jQuery("#name").val() == "") {
+        Swal.fire({
+            position: 'top-end',
+            type: 'error',
+            title: 'Please verify firstname',
+            showConfirmButton: false,
+            timer: 1500
+        });
+        return false;
+    } else if (jQuery("#email").val() == "") {
+        Swal.fire({
+            position: 'top-end',
+            type: 'error',
+            title: 'Please verify Email',
+            showConfirmButton: false,
+            timer: 1500
+        });
+        return false;
+    } else if (jQuery("#message").val() == "") {
+        Swal.fire({
+            position: 'top-end',
+            type: 'error',
+            title: 'Please verify  the Message',
+            showConfirmButton: false,
+            timer: 1500
+        });
+        return false;
+    }
+
+
+    jQuery(".formMessageSuccess").hide();
+    jQuery(".formMessageError").hide();
+    jQuery(".loadFormBtn").show();
+    jQuery(".submitFormBtn").hide();
+
+    const params = {
+        name: jQuery("#name").val(),
+        email: jQuery("#email").val(),
+        message: jQuery("#message").val(),
+        company: "dojobox",
+        campaign: "contactus"
+    };
+
+    const result = website_form_register(params);
+
+    if (result === "success") {
+        jQuery(".loadFormBtn").hide();
+        jQuery(".submitFormBtn").show();
+        jQuery(".formMessageSuccess").show();
+        jQuery("#name").val(''),
+        jQuery("#lastname").val('');
+        jQuery("#email").val('');
+        jQuery("#message").val('');
+        jQuery("#phone").val('');
+
+        Swal.fire({
+            position: 'top-end',
+            type: 'success',
+            title: 'The message has been sent successfully',
+            showConfirmButton: false,
+            timer: 3000
+        });
+
+    } else {
+        jQuery(".formMessageError").show();
+    }
+
+    setTimeout(resetMessagesForm, 5000);
+}
+
+const resetMessagesForm = () => {
+    jQuery(".formMessageSuccess").hide();
+    jQuery(".formMessageError").hide();
+    jQuery(".formMessageValidation").hide();
+}
+
+</script>
+
+
 </body>
 
 </html>
