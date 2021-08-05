@@ -704,7 +704,7 @@ h3 {
 @media (max-width: 767px) {
   /* line 2, ../../Arafath/CL/Cl November/227. Health _ Fitness/HTML/scss/_section_title.scss */
   .section_title h3 {
-    font-size: 30px;
+    font-size: 60px;
     line-height: 36px;
   }
 }
@@ -2502,8 +2502,8 @@ h3 {
 /* line 1, ../../Arafath/CL/Cl November/227. Health _ Fitness/HTML/scss/_pricings.scss */
 .priscing_area {
   background: #000000;
-  padding-bottom: 140px;
-  padding-top: 170px;
+  padding-bottom: 20px;
+  padding-top: 40px;
 }
 
 @media (max-width: 767px) {
@@ -2517,22 +2517,35 @@ h3 {
 @media (min-width: 768px) and (max-width: 991px) {
   /* line 1, ../../Arafath/CL/Cl November/227. Health _ Fitness/HTML/scss/_pricings.scss */
   .priscing_area {
-    padding-top: 100px;
-    padding-bottom: 70px;
+    padding-top: 30px;
+    padding-bottom: 30px;
   }
 }
 
 /* line 13, ../../Arafath/CL/Cl November/227. Health _ Fitness/HTML/scss/_pricings.scss */
 .priscing_area .single_prising {
   background: #1a1a1a;
-  padding: 40px 0;
-  border: 1px solid transparent;
+  padding: 20px 0;
+  border: 1px solid #0000;
   -webkit-transition: 0.3s;
   -moz-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
   margin-bottom: 30px;
 }
+
+.priscing_area .single_prising.h500height {
+  height: 550px;
+}
+
+.priscing_area .single_prising.h400height {
+  height: 400px;
+}
+
+.priscing_area .single_prising.h600height {
+  height: 650px;
+}
+
 
 /* line 19, ../../Arafath/CL/Cl November/227. Health _ Fitness/HTML/scss/_pricings.scss */
 .priscing_area .single_prising .prising_header {
@@ -2541,11 +2554,11 @@ h3 {
 
 /* line 21, ../../Arafath/CL/Cl November/227. Health _ Fitness/HTML/scss/_pricings.scss */
 .priscing_area .single_prising .prising_header h3 {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: bold;
   color: #fff;
   text-transform: uppercase;
-  letter-spacing: 5px;
+  letter-spacing: 7px;
 }
 
 /* line 27, ../../Arafath/CL/Cl November/227. Health _ Fitness/HTML/scss/_pricings.scss */
@@ -2554,7 +2567,7 @@ h3 {
   font-family: "SourceSerifPro", sans-serif;
   color: #84764d;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 22px;
 }
 
 /* line 35, ../../Arafath/CL/Cl November/227. Health _ Fitness/HTML/scss/_pricings.scss */
@@ -2562,16 +2575,21 @@ h3 {
   border-top: 1px solid #313131;
   padding-top: 27px;
   padding-bottom: 32px;
+  padding: 20px;
 }
+
+
 
 /* line 40, ../../Arafath/CL/Cl November/227. Health _ Fitness/HTML/scss/_pricings.scss */
 .priscing_area .single_prising .pricing_body ul li {
   font-family: "SourceSerifPro", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  line-height: 40px;
+  line-height: 22px;  
   color: #fff;
+  margin-bottom: 15px;
 }
+
 
 /* line 46, ../../Arafath/CL/Cl November/227. Health _ Fitness/HTML/scss/_pricings.scss */
 .priscing_area .single_prising .pricing_body ul li.off-color {

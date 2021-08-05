@@ -70,3 +70,38 @@ hr.line{
 .form-contact .form-control {
   background-color: #fff !important;
 }
+
+.single_services{
+  border: 3px solid #85754f;
+  padding: 20px;
+  -webkit-box-shadow: 10px 10px 5px -4px rgba(222,222,222,1);
+-moz-box-shadow: 10px 10px 5px -4px rgba(222,222,222,1);
+box-shadow: 10px 10px 5px -4px rgba(222,222,222,1);
+margin-bottom: 40px;
+min-height:350px
+}
+
+.single_services h3{
+  font-size: 80px;
+  letter-spacing: .5vw;
+  font-weight: 800;
+}
+
+
+.single_services h4{
+ font-size: 26px;
+    letter-spacing: 3px;
+    margin-top: -20px;
+    font-family: "Morganite Book", sans-serif;
+    margin-bottom: 10px;
+    color: #85754f;
+    font-weight: 400;
+  }
+
+  .single_services ul li{
+    font-family: "SourceSerifPro", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+    }
+  
