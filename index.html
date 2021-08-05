@@ -109,7 +109,7 @@
                         <div class="single_catagory text-center overlay2 cat_bg_1">
                             <h3><span class="clf-content-homepage_features01 tag_"></span></h3>
                             <p>
-                              <span class="clf-content-homepage_features_description01 tag_"></span>
+                                <span class="clf-content-homepage_features_description01 tag_"></span>
                             </p>
                         </div>
                     </div>
@@ -117,7 +117,7 @@
                         <div class="single_catagory text-center overlay2 cat_bg_2">
                             <h3><span class="clf-content-homepage_features02 tag_"></span></h3>
                             <p>
-                              <span class="clf-content-homepage_features_description02 tag_"></span>
+                                <span class="clf-content-homepage_features_description02 tag_"></span>
                             </p>
                         </div>
                     </div>
@@ -125,7 +125,7 @@
                         <div class="single_catagory text-center overlay2 cat_bg_3">
                             <h3><span class="clf-content-homepage_features03 tag_"></span></h3>
                             <p>
-                              <span class="clf-content-homepage_features_description03 tag_"></span>
+                                <span class="clf-content-homepage_features_description03 tag_"></span>
                             </p>
                         </div>
                     </div>
@@ -133,8 +133,6 @@
             </div>
         </div>
         <!--/ catagory_area  -->
-
-
 
         <div class="priscing_area" style="background-color:#f5f5f5; padding: 70px 10px;">
             <div class="container">
@@ -273,7 +271,7 @@
                                 <span class="clf-content-planes_price04 tag_"></span>
                             </div>
                             <div class="pricing_body">
-                                 <span class="clf-content-planes_description04 tag_"></span>
+                                <span class="clf-content-planes_description04 tag_"></span>
                             </div>
                             <div class="pricing_btn">
                             </div>
@@ -414,7 +412,7 @@
                         <div class="col-xl-4 col-md-6 col-lg-4">
                             <div class="footer_widget">
                                 <h3 class="footer_title">
-                                    Subscribete
+                                    Subscribete aqui
                                 </h3>
                                 <form action="#" class="newsletter_form">
                                     <input type="text" placeholder="Enter your mail">
@@ -542,64 +540,64 @@
         </script>
 
         <script>
-const loadCluufContent = ({
-  method = "GET",
-  params = "",
-  url = "",
-  body = null,
-  contentType = "application/x-www-form-urlencoded",
-}) => {
-  try {
-    const xhttp = new XMLHttpRequest();
-    var searchParams = new URLSearchParams(params);
-    xhttp.open(method, url, true);
-    xhttp.setRequestHeader("Content-type", contentType);
-    xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
+            const loadCluufContent = ({
+                method = "GET",
+                params = "",
+                url = "",
+                body = null,
+                contentType = "application/x-www-form-urlencoded",
+            }) => {
+                try {
+                    const xhttp = new XMLHttpRequest();
+                    var searchParams = new URLSearchParams(params);
+                    xhttp.open(method, url, true);
+                    xhttp.setRequestHeader("Content-type", contentType);
+                    xhttp.setRequestHeader("Access-Control-Allow-Origin", "*");
 
-    xhttp.onreadystatechange = function () {
-      if (xhttp.readyState === XMLHttpRequest.DONE) {
-        var status = xhttp.status;
-        if (status === 0 || (status >= 200 && status < 400)) {
-          const result = JSON.parse(xhttp.responseText);
-          Object.keys(result).forEach((key) => {
-            if (result[key].type === "TEXT") {
-              $(`.clf-content-${result[key].code}`).html(result[key].content);
-            }
-            
-            
-            if (result[key].type === "LIST") {
-               let listado  = result[key].content.split(",");
-               listado.forEach((key2,index) => { 
-                   console.log(`.cluuf-list-${result[key].code}-${index}`,key2 ); 
-                   $(`.clf-list-${result[key].code}-${index}`).text(key2); 
-               });
-            }
+                    xhttp.onreadystatechange = function () {
+                        if (xhttp.readyState === XMLHttpRequest.DONE) {
+                            var status = xhttp.status;
+                            if (status === 0 || (status >= 200 && status < 400)) {
+                                const result = JSON.parse(xhttp.responseText);
+                                Object.keys(result).forEach((key) => {
+                                    if (result[key].type === "TEXT") {
+                                        $(`.clf-content-${result[key].code}`).html(result[key].content);
+                                    }
 
-            if (result[key].type === "HTML") {
-              $(`.clf-content-${result[key].code}`).html(result[key].content);
-            }
 
-            if (result[key].type === "IMAGE") {
-              $(`.clf-src-${result[key].code}`).attr(
-                "src",
-                result[key].content
-              );
-            }
-          });
-        } else {
-        }
-      }
-    };
-    xhttp.send();
-  } catch (error) {}
-};
+                                    if (result[key].type === "LIST") {
+                                        let listado = result[key].content.split(",");
+                                        listado.forEach((key2, index) => {
+                                            console.log(`.cluuf-list-${result[key].code}-${index}`, key2);
+                                            $(`.clf-list-${result[key].code}-${index}`).text(key2);
+                                        });
+                                    }
 
-$(document).ready(function () {
-  loadCluufContent({
-    method: "GET",
-    url: "https://cluuf.s3.sa-east-1.amazonaws.com/32242525fd2f7d184fbc00511153b7eq33232.json",
-  });
-});
+                                    if (result[key].type === "HTML") {
+                                        $(`.clf-content-${result[key].code}`).html(result[key].content);
+                                    }
+
+                                    if (result[key].type === "IMAGE") {
+                                        $(`.clf-src-${result[key].code}`).attr(
+                                            "src",
+                                            result[key].content
+                                        );
+                                    }
+                                });
+                            } else {
+                            }
+                        }
+                    };
+                    xhttp.send();
+                } catch (error) { }
+            };
+
+            $(document).ready(function () {
+                loadCluufContent({
+                    method: "GET",
+                    url: "https://cluuf.s3.sa-east-1.amazonaws.com/32242525fd2f7d184fbc00511153b7eq33232.json",
+                });
+            });
 
         </script>
     </body>
