@@ -617,7 +617,7 @@
                                 const result = JSON.parse(xhttp.responseText);
                                 Object.keys(result).forEach((key) => {
                                     if (result[key].type === "TEXT") {
-                                        $(`.clf-content-${result[key].tag}`).html(result[key].content);
+                                        $(`.clf-content-${result[key].code}`).html(result[key].content);
                                     }
 
                                     if (result[key].tag === "primaryColor") {
@@ -642,17 +642,17 @@
                                     if (result[key].type === "LIST") {
                                         let listado = result[key].content.split(",");
                                         listado.forEach((key2, index) => {
-                                            console.log(`.cluuf-list-${result[key].tag}-${index}`, key2);
+                                            console.log(`.cluuf-list-${result[key].code}-${index}`, key2);
                                             $(`.clf-list-${result[key].code}-${index}`).text(key2);
                                         });
                                     }
 
                                     if (result[key].type === "HTML") {
-                                        $(`.clf-content-${result[key].tag}`).html(result[key].content);
+                                        $(`.clf-content-${result[key].code}`).html(result[key].content);
                                     }
 
                                     if (result[key].type === "IMAGE") {
-                                        $(`.clf-src-${result[key].tag}`).attr(
+                                        $(`.clf-src-${result[key].code}`).attr(
                                             "src",
                                             result[key].content
                                         );
