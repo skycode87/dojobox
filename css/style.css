@@ -2546,6 +2546,10 @@ h3 {
   height: 650px;
 }
 
+.priscing_area .single_prising.h800height {
+  height: 800px;
+}
+
 
 /* line 19, ../../Arafath/CL/Cl November/227. Health _ Fitness/HTML/scss/_pricings.scss */
 .priscing_area .single_prising .prising_header {
@@ -2583,11 +2587,15 @@ h3 {
 /* line 40, ../../Arafath/CL/Cl November/227. Health _ Fitness/HTML/scss/_pricings.scss */
 .priscing_area .single_prising .pricing_body ul li {
   font-family: "SourceSerifPro", sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 22px;  
-  color: #fff;
-  margin-bottom: 15px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #fff;
+    margin-bottom: 15px;
+    max-width: 400px;
+    margin: auto;
+    text-align: left;
+    padding-bottom: 30px;
 }
 
 
