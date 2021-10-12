@@ -103,3 +103,87 @@ min-height:350px
     font-weight: 500;
     line-height: 30px;
 }
+
+
+.single_plan{
+  border: 3px solid rgb(41, 41, 41);
+  padding: 20px;
+min-height:350px;
+background: rgb(41, 41, 41);
+min-height: 650px;
+}
+
+.wrapper_plan:hover{
+transform: scale(1.03);
+cursor: pointer;
+}
+
+
+.single_plan h3{
+  font-size: 120px;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 10px;
+}
+
+.single_plan h4{
+ font-size: 26px;
+    letter-spacing: 3px;
+    margin-top: -20px;
+    font-family: "Morganite Book", sans-serif;
+    margin-bottom: 10px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.single_plan ul li{
+    font-family: "SourceSerifPro", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #fff;
+}
+
+.single_plan h4.special{
+  font-size: 42px; margin-bottom: 0px; padding-bottom: 0px; margin-top: 20px; color:#85754F;
+}
+
+.single_plan li b{
+  color:#fff;
+  font-size: 16px;
+  text-decoration: underline;
+}
+
+.single_plan_btn{
+  background: #ff5e13 !important;
+  text-align: center;
+  color: #fff !important;
+  margin-bottom: 40px;
+  padding: 20px;
+  letter-spacing: 5px;
+}
+
+.single_plan_btn p{
+  text-align: center;
+  color: #fff !important;
+  font-size: 42px !important;
+  font-family: "Morganite Book", sans-serif;
+}
+
+
+.single_plan ._btn:hover{
+  transform: scale(1.03);
+}
+
+.single_plan .plus{
+  font-size: 80px;
+  margin: 25px;
+}
+
+
+.single_plan  hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid #eceaea80;
+}
