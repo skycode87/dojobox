@@ -222,28 +222,75 @@
         </div>
 
 
-        <div class="offer_area offer_bg clf-background-promo2_background imgtag_">
-            <div class="container">
-                <div class="row justify-content-start">
-                    <div class="col-lg-6">
-                        <div class="offer_text">
+        <style>
+            table.timecard {
+                margin: auto;
+                width: 1100px;
+                border-collapse: collapse;
+                border: 1px solid #fff;
+                font-size: 14px;
+                /*for older IE*/
+                border-style: hidden;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
-                            <h4><span class="clf-content-promo2_title tag_"></span><br>
-                                <span class="clf-content-promo2_title2 tag_"></span>
-                            </h4>
-                            <h3><span class="clf-content-promo2_title3 tag_"></span></h3>
-                            <p><span class="clf-content-promo2_subtitle tag_"></span></p>
-                            <a href="https://s3.us-east-2.amazonaws.com/www.cluuf.net/gym.html?q=612864ee6e624ffd497d2885&agency=dojobox&type=suscriber&p=614b610406de295f99ee4a54" class="boxed-btn3">
-                                <span class="clf-content-promo2_button tag_"></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            }
 
+            table.timecard caption {
+                background-color: #f79646;
+                color: #fff;
+                font-size: x-large;
+                font-weight: bold;
+                letter-spacing: .3em;
+            }
 
-        <div class="priscing_area" style="background-color: #fff;">
+            table.timecard thead th {
+                padding: 8px;
+                background-color: #fde9d9;
+                font-size: large;
+                font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            }
+
+            table.timecard thead th#thDay {
+                width: 40%;
+            }
+
+            table.timecard thead th#thRegular,
+            table.timecard thead th#thOvertime,
+            table.timecard thead th#thTotal {
+                width: 20%;
+            }
+
+            table.timecard th,
+            table.timecard td {
+                padding: 3px;
+                border-width: 1px;
+                border-style: solid;
+                border-color: #f79646 #ccc;
+            }
+
+            table.timecard td {
+                text-align: center;
+            }
+
+            table.timecard tbody th {
+                text-align: left;
+                font-weight: normal;
+            }
+
+            table.timecard tfoot {
+                font-weight: bold;
+                font-size: large;
+                background-color: #687886;
+                color: #fff;
+            }
+
+            table.timecard tr.even {
+                background-color: #fde9d9;
+            }
+        </style>
+
+        <div style="background-color: #fff; padding: 50px 10px;">
+
             <div class="container">
                 <div class="row">
                     <div class="col-xl-12">
@@ -253,115 +300,79 @@
                     </div>
                 </div>
                 <div class="row">
+                    <div class="col-xl-12">
+                        <table class="timecard">
+                            <thead>
+                                <tr>
+                                    <th id="thDay" style="width: 120px;"></th>
+                                    <th id="thRegular">REI</th>
+                                    <th id="thOvertime">YU</th>
+                                    <th id="thOvertime">GI</th>
+                                    <th id="thTotal">Chuu</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="even">
+                                    <th></th>
+                                    <td>290.000 COP/Mensual </td>
+                                    <td>740.000 COP/Trimestral </td>
+                                    <td>1.392.000 COP/Semestral </td>
+                                    <td>2.610.000 COP/Anual</td>
+                                </tr>
+                                <tr class="odd">
+                                    <th>Descuento Bono Bushido*</th>
+                                    <td> 203.000 COP/Mensual</td>
+                                    <td>609.000 COP/Mensual </td>
+                                    <td>1.218.000 COP/mensual</td>
+                                    <td>2.436.000 COP/Mensual</td>
+                                </tr>
+                                <tr class="even">
+                                    <th>Descuento en Planes de Coaching y PNL</th>
+                                    <td> 20% </td>
+                                    <td> 30% </td>
+                                    <td> 1 Sesion GRATIS </td>
+                                    <td>3 Sesiones GRATIS</td>
+                                </tr>
+                                <tr class="odd">
+                                    <th>Invita a un amigo por</th>
+                                    <td> 3 días</td>
+                                    <td> 5 días </td>
+                                    <td> 7 días </td>
+                                    <td> 9 días </td>
+                                </tr>
+                                <tr class="even">
+                                    <th>Entrenamiento DojoBox</th>
+                                    <td><img src="img/check.png" width="20px"> </td>
+                                    <td><img src="img/check.png" width="20px"> </td>
+                                    <td><img src="img/check.png" width="20px"> </td>
+                                    <td><img src="img/check.png" width="20px"> </td>
+                                </tr>
+                                <tr class="odd">
+                                    <th> Conversatorios y Charlas</th>
+                                    <td><img src="img/check.png" width="20px"> </td>
+                                    <td><img src="img/check.png" width="20px"> </td>
+                                    <td><img src="img/check.png" width="20px"> </td>
+                                    <td><img src="img/check.png" width="20px"> </td>
+                                </tr>
+                                <tr class="even">
+                                    <th> Obsequio DojoBox</th>
+                                    <td> </td>
+                                    <td></td>
+                                    <td><img src="img/check.png" width="20px"> </td>
+                                    <td><img src="img/check.png" width="20px"> </td>
+                                </tr>
 
+                            </tbody>
 
-                    <div class="col-lg-6 col-md-6 pricing-columns">
-                        <div class="single_prising text-center h800height">
-                            <div class="prising_header">
-                                <h3><span class="subtitle">Plan</span><br><span style="font-size: 54px;" class="clf-content-planes_name05 tag_"></span></h3>
-                                <span class="clf-content-planes_price05 tag_"></span>
-                            </div>
-                            <div class="pricing_btn ">
-                                <a class="boxed-btn3" style="background: #d5540e;"
-                                    href="https://s3.us-east-2.amazonaws.com/www.cluuf.net/gym.html?q=612864ee6e624ffd497d2885&agency=dojobox&type=suscriber&p=614b610406de295f99ee4a54">Inscribirme</a>
-                            </div>
-                            <div class="pricing_body">
-                                <span class="clf-html-planes_description05 tag_"></span>
-                            </div>
-
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-lg-6 col-md-6 pricing-columns">
-                        <div class="single_prising text-center h800height">
-                            <div class="prising_header">
-                                <h3><span class="subtitle">Plan</span><br><span style="font-size: 54px;" class="clf-content-planes_name06 tag_"></span></h3>
-                                <span class="clf-content-planes_price06 tag_"></span>
-                            </div>
-                            <div class="pricing_btn ">
-                                <a class="boxed-btn3" style="background: #d5540e;"
-                                    href="https://s3.us-east-2.amazonaws.com/www.cluuf.net/gym.html?q=612864ee6e624ffd497d2885&agency=dojobox&type=suscriber&p=614b60b706de295f99ee4a53">Inscribirme</a>
-                            </div>
-                            <div class="pricing_body">
-                                <span class="clf-html-planes_description06 tag_"></span>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 pricing-columns">
-                        <div class="single_prising text-center h800height">
-                            <div class="prising_header">
-                                <h3><span class="subtitle">Plan</span><br><span style="font-size: 54px;" class="clf-content-planes_name01 tag_"></span></h3>
-                                <span class="clf-content-planes_price01 tag_"></span>
-                            </div>
-                            <div class="pricing_btn ">
-                                <a class="boxed-btn3" style="background: #d5540e;"
-                                    href="https://s3.us-east-2.amazonaws.com/www.cluuf.net/gym.html?q=612864ee6e624ffd497d2885&agency=dojobox&type=suscriber&p=612864ee6e624ffd497d2889">Inscribirme</a>
-                            </div>
-                            <div class="pricing_body">
-                                <span class="clf-html-planes_description01 tag_"></span>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 pricing-columns">
-                        <div class="single_prising text-center h800height">
-                            <div class="prising_header">
-                                <h3><span class="subtitle">Plan</span><br><span style="font-size: 54px;" class="clf-content-planes_name02 tag_"></span></h3>
-                                <span class="clf-content-planes_price02 tag_"></span>
-                            </div>
-                            <div class="pricing_btn ">
-                                <a class="boxed-btn3" style="background: #d5540e;"
-                                    href="https://s3.us-east-2.amazonaws.com/www.cluuf.net/gym.html?q=612864ee6e624ffd497d2885&agency=dojobox&type=suscriber&p=612864ee6e624ffd497d2887">Inscribirme</a>
-                            </div>
-                            <div class="pricing_body">
-                                <span class="clf-html-planes_description02 tag_"></span>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 pricing-columns">
-                        <div class="single_prising text-center h800height">
-                            <div class="prising_header">
-                                <h3><span class="subtitle">Plan</span><br><span class="clf-content-planes_name03 tag_" style="font-size: 54px;"></span></h3>
-                                <span class="clf-content-planes_price03 tag_"></span>
-                            </div>
-                            <div class="pricing_btn ">
-                                <a class="boxed-btn3" style="background: #d5540e;"
-                                    href="https://s3.us-east-2.amazonaws.com/www.cluuf.net/gym.html?q=612864ee6e624ffd497d2885&agency=dojobox&type=suscriber&p=612864ee6e624ffd497d2888">Inscribirme</a>
-                            </div>
-                            <div class="pricing_body">
-                                <span class="clf-html-planes_description03 tag_"></span>
-                            </div>
-
-
-                        </div>
-                    </div>
-
-                    <div class="col-lg-6 col-md-6 pricing-columns">
-                        <div class="single_prising text-center h800height">
-                            <div class="prising_header">
-                                <h3><span class="subtitle">Plan</span><br><span style="font-size: 54px;" class="clf-content-planes_name04 tag_"></span></h3>
-                                <span class="clf-content-planes_price04 tag_"></span>
-                            </div>
-                            <div class="pricing_btn ">
-                                <a class="boxed-btn3" style="background: #d5540e;"
-                                    href="https://s3.us-east-2.amazonaws.com/www.cluuf.net/gym.html?q=612864ee6e624ffd497d2885&agency=dojobox&type=suscriber&p=612864ee6e624ffd497d2886">Inscribirme</a>
-                            </div>
-                            <div class="pricing_body">
-                                <span class="clf-html-planes_description04 tag_"></span>
-                            </div>
-
-                        </div>
+                        </table>
+                        <p>
+                            *30% de descuento en la tarifa mensual. Aplica para las primeras 50 personas en inscribirse
+                        </p>
                     </div>
                 </div>
             </div>
         </div>
+
 
 
         <!-- ================ contact section start ================= -->
@@ -491,18 +502,6 @@
                                 </ul>
                             </div>
                         </div>
-                        <!--x  <div class="col-xl-4 col-md-6 col-lg-4">
-                            <div class="footer_widget">
-                                <h3 class="footer_title">
-                                    Subscribete aqui
-                                </h3>
-                                <form action="#" class="newsletter_form">
-                                    <input type="text" placeholder="Enter your mail">
-                                    <button type="submit">Subscribete</button>
-                                </form>
-                                <p class="newsletter_text">Mantente al tanto de clases personalizadas y cursos.</p>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
             </div>
