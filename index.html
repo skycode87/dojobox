@@ -573,18 +573,43 @@
             });
         </script>
 
-        <!-- Cluuf configuration  -->
+        <!-- Cluuf configuration 
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+         -->
         <script>localStorage.setItem("privacyPolicyURL", "https://dojobox.com.co");</script>
         <link async rel="stylesheet" href="https://cluuftracks.herokuapp.com/cluuf.css">
-        <script async src="https://cluuftracks.herokuapp.com/track.js?cluuf_key=32242525fd2f7d184fbc00511153b7eq33232&instance=5fd41cefce505979816ec0de" id="cluuf-analytics"></script>
-        <!-- Cluuf configuration https://cluuftracks.herokuapp.com -->
+
+        <script>
+            localStorage.setItem("cluufSettings", JSON.stringify({
+                client: "dojobox",
+                keypublic: "32242525fd2f7d184fbc00511153b7eq33232",
+                instanceId: "5fd41cefce505979816ec0de",
+                tracking: true,
+                editing: false,
+                backend: "https://cluufweb-backend.herokuapp.com",
+                trackBackend: "https://cluuftracks.herokuapp.com",
+                //trackBackend: "http://localhost:2011",
+                //backend: "http://localhost:2001",
+                frontend: "https://cluuf-web.herokuapp.com",
+            })); 
+        </script>
+
+
+
+        <!-- Cluuf configuration -->
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <link async rel="stylesheet" href="https://cluuftracks.herokuapp.com/cluuf.css">
+        <script src="http://localhost:2011/public/cluuf.js"></script>
+        <!-- <script src="http://localhost:2011/public/adminCluuf.js"></script>
+       <script async src="https://cluuftracks.herokuapp.com/clientCluuf.js"></script>-->
+        <script async src="http://localhost:2011/public/cluufFormSubmit.js"></script>
+        <script async src="http://localhost:2011/public/contentCluuf.js"></script>
+        <!-- Cluuf configuration -->
 
 
         <script>
-
             const formSubmit = () => {
-                connectToCluufCRM({
+                connectToCluufCRM_v2({
                     email: {
                         value: jQuery("#email").val(),
                         required: true,
@@ -604,7 +629,7 @@
                         required: false,
                     },
                     campaign: "Contact Us - Website Form",
-                    formId: "60740e2517c4317041b6a591", // proporcionado por cluuf-web
+                    formId: "61edfa9b7dc1317b6901e628", // proporcionado por cluuf-web
                     successMessage: "El mensaje ha sido enviado con exito",
                 }, {
                     onSuccess: (response) => {
@@ -621,10 +646,8 @@
                 jQuery(".formMessageError").hide();
                 jQuery(".formMessageValidation").hide();
             }
-
         </script>
+
     </body>
 
 </html>
-
-// Pre registro
