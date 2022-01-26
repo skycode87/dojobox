@@ -388,7 +388,24 @@
                 </div>
                 <div class="row">
                     <div class="col-lg-8">
-                        <form class="form-contact contact_form" onsubmit="sendEmail()" method="post" id="contactForm" novalidate="novalidate">
+                        <form class="form-contact clf-form-contact-us contact_form" onsubmit="sendEmail()" method="post" id="contactForm" novalidate="novalidate">
+                            <input value="false" type="hidden" id="adminEmail" name="adminEmail">
+                            <input type="hidden" id="isNotifyContact" name="isNotifyContact" value="false">
+                            <input type="hidden" id="planId" value="61edfa9b7dc1317b6901e628">
+                            <input type="hidden" id="messageSuccess" value="El mensaje ha sido enviado">
+                            <input type="hidden" id="messageError" value="El mensaje no ha sido enviado">
+                            <input type="hidden" id="campaign" value="Contactanos - Formulario Website">
+                            <input type="hidden" id="phone" value="">
+                            <input type="hidden" id="phoneRequired" value="false">
+                            <input type="hidden" id="messageRequired" value="false">
+                            <input type="hidden" id="nameRequired" value="true">
+                            <input type="hidden" id="emailRequired" value="true">
+                            <input type="hidden" id="phoneRequiredMessage" value="Please verify Phone and try again.">
+                            <input type="hidden" id="emailRequiredMessage" value="Por favor valida el email">
+                            <input type="hidden" id="nameRequiredMessage" value="Por favor valida tu nombre">
+                            <input type="hidden" id="messageRequiredMessage" value="Por favor valida el mensaje">
+                            <input type="text" id="firstname" name="firstname" style="position: absolute; top: -100000px"> <!-- Protección -->
+                            <!-- Cluuf -->
                             <div class="row">
                                 <div class="col-12">
                                     <div class="form-group">
@@ -410,7 +427,7 @@
                                 </div>
                             </div>
                             <div class="form-group mt-3">
-                                <a href="#!" onclick="formSubmit()" class="button button-contactForm boxed-btn">Enviar Mensaje</a>
+                                <a href="#!" id="send-form" class="button button-contactForm boxed-btn">Enviar Mensaje</a>
                             </div>
                         </form>
                     </div>
@@ -516,7 +533,7 @@
                         <div class="col-xl-12">
                             <p class="copy_right text-center">
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright 2021 &copy;
+                                Copyright 2022 &copy;
                                 <script>document.write(new Date().getFullYear());</script> All rights reserved | This website is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a
                                     href="https://qreatech.com" target="_blank">Qreatech</a>
                                 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
@@ -579,73 +596,57 @@
         <script>localStorage.setItem("privacyPolicyURL", "https://dojobox.com.co");</script>
         <link async rel="stylesheet" href="https://cluuftracks.herokuapp.com/cluuf.css">
 
+
         <script>
             localStorage.setItem("cluufSettings", JSON.stringify({
-                client: "dojobox",
-                keypublic: "32242525fd2f7d184fbc00511153b7eq33232",
-                instanceId: "5fd41cefce505979816ec0de",
+                client: "lospatioshb",
+                keypublic: "31445fd2f7d184fbc00511153b7e4144",
+                instanceId: "5fd4216d461fbc7b4223c9db",
                 tracking: true,
                 editing: false,
                 backend: "https://cluufweb-backend.herokuapp.com",
                 trackBackend: "https://cluuftracks.herokuapp.com",
-                //trackBackend: "http://localhost:2011",
-                //backend: "http://localhost:2001",
+                //trackBackend: "http://localhost:2000",
+                //backend: "https://8339-201-184-243-107.ngrok.io",
                 frontend: "https://cluuf-web.herokuapp.com",
             })); 
         </script>
 
-
-
         <!-- Cluuf configuration -->
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
         <link async rel="stylesheet" href="https://cluuftracks.herokuapp.com/cluuf.css">
-        <script src="http://localhost:2011/public/cluuf.js"></script>
-        <!-- <script src="http://localhost:2011/public/adminCluuf.js"></script>
-       <script async src="https://cluuftracks.herokuapp.com/clientCluuf.js"></script>-->
-        <script async src="http://localhost:2011/public/cluufFormSubmit.js"></script>
-        <script async src="http://localhost:2011/public/contentCluuf.js"></script>
+        <script src="https://cluuftracks.herokuapp.com/cluuf.js"></script>
+        <script src="https://cluuftracks.herokuapp.com/adminCluuf.js"></script>
+        <script async src="https://cluuftracks.herokuapp.com/clientCluuf.js"></script>
+        <script async src="https://cluuftracks.herokuapp.com/cluufFormSubmit.js"></script>
         <!-- Cluuf configuration -->
 
 
         <script>
-            const formSubmit = () => {
-                connectToCluufCRM_v2({
-                    email: {
-                        value: jQuery("#email").val(),
-                        required: true,
-                        message: "Please verify Email and try again."
+
+            $('#send-form').on('click', function () {
+                $('#send-form').css("background", "#fff");
+                $('#send-form').html(`<img width="40px" src="https://cluuftracks.herokuapp.com/loading3.gif">`);
+                contactUsForm({
+                    onSuccess: () => {
+                        $(".form-message").text(document.querySelector(".clf-form-contact-us #messageSuccess").value);
+                        $('#send-form').html(`Message Enviado!`);
+                        $('#send-form').css("background", "blue");
+                        setTimeout(() => $(".form-message").text(""), 3000);
                     },
-                    name: {
-                        value: jQuery("#name").val(),
-                        required: true,
-                        message: "Please verify Name and try again."
+                    onError: () => {
+                        $(".form-message").text(document.querySelector(".clf-form-contact-us #messageError").value);
+                        setTimeout(() => $(".form-message").text(""), 3000);
                     },
-                    message: {
-                        value: jQuery("#message").val(),
-                        required: true,
-                        message: "Please verify Message and try again."
+                    onValidate: () => {
+                        $('#send-form').html(`Enviar mensaje`);
+                        $('#send-form').css("background", "none");
                     },
-                    phone: {
-                        required: false,
-                    },
-                    campaign: "Contact Us - Website Form",
-                    formId: "61edfa9b7dc1317b6901e628", // proporcionado por cluuf-web
-                    successMessage: "El mensaje ha sido enviado con exito",
-                }, {
-                    onSuccess: (response) => {
-                        jQuery("#name").val(''),
-                            jQuery("#email").val('');
-                        jQuery("#message").val('');
-                    },
-                    onError: () => console.log("Error enviando el formulario"),
-                }
-                );
-            }
-            const resetMessagesForm = () => {
-                jQuery(".formMessageSuccess").hide();
-                jQuery(".formMessageError").hide();
-                jQuery(".formMessageValidation").hide();
-            }
+                    onFinally: () => {
+
+                    }
+                });
+            });
+
         </script>
 
     </body>
