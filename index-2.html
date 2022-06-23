@@ -29,8 +29,7 @@
 
         <script>localStorage.setItem("keypublic", "32242525fd2f7d184fbc00511153b7eq33232")</script>
         <script>localStorage.setItem("alias", "dojobox")</script>
-        <script async type="text/javascript"
-            src="https://my-app-3ocg5.ondigitalocean.app/tracks/contentManager.js?cluuf_key=32242525fd2f7d184fbc00511153b7eq33232&instance=5fd41cefce505979816ec0de"></script>
+        <script async type="text/javascript" src="https://cluuftracks.herokuapp.com/contentManager.js?cluuf_key=32242525fd2f7d184fbc00511153b7eq33232&instance=5fd41cefce505979816ec0de"></script>
 
 
 
@@ -595,13 +594,42 @@
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
          -->
         <script>localStorage.setItem("privacyPolicyURL", "https://dojobox.com.co");</script>
-        <link async rel="stylesheet" href="https://my-app-3ocg5.ondigitalocean.app/tracks/cluuf.css">
+        <link async rel="stylesheet" href="https://cluuftracks.herokuapp.com/cluuf.css">
+
+
+        <script>
+            localStorage.setItem("cluufSettings", JSON.stringify({
+                client: "dojobox",
+                keypublic: "32242525fd2f7d184fbc00511153b7eq33232",
+                instanceId: "5fd41cefce505979816ec0de",
+                tracking: true,
+                editing: true,
+                backend: "https://cluufweb-backend.herokuapp.com",
+                trackBackend: "https://cluuftracks.herokuapp.com",
+                //trackBackend: "http://localhost:2000",
+                //backend: "http://localhost:2001",
+                frontend: "https://cluuf-web.herokuapp.com",
+            })); 
+        </script>
+
+
+        <!-- Cluuf configuration -->
+        <link async rel="stylesheet" href="https://cluuftracks.herokuapp.com/cluuf.css">
+        <script src="https://cluuftracks.herokuapp.com/cluuf.js"></script>
+        <script src="https://cluuftracks.herokuapp.com/adminCluuf.js"></script>
+        <script async src="https://cluuftracks.herokuapp.com/clientCluuf.js"></script>
+        <script async src="https://cluuftracks.herokuapp.com/cluufFormSubmit.js"></script>
+        <script async src="https://cluuftracks.herokuapp.com/contentCluuf.js"></script>
+        <!-- Cluuf configuration -->
+
+
+
 
         <script>
 
             $('#send-form').on('click', function () {
                 $('#send-form').css("background", "#fff");
-                $('#send-form').html(`<img width="40px" src="https://my-app-3ocg5.ondigitalocean.app/tracks/loading3.gif">`);
+                $('#send-form').html(`<img width="40px" src="https://cluuftracks.herokuapp.com/loading3.gif">`);
                 contactUsForm({
                     onSuccess: () => {
                         $(".form-message").text(document.querySelector(".clf-form-contact-us #messageSuccess").value);
